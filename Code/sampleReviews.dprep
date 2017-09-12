@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 34,
+  "id": "1ecfe41b-6738-4e3e-a18c-8fe666a676a7",
+  "activities": [
+    {
+      "id": "55ffa822-0894-4110-b6e3-00f9139bd5fe",
+      "name": "sampleReviews",
+      "blocks": [
+        {
+          "id": "39e5a23f-c99d-4b84-a9d4-d01aca43aaeb",
+          "type": "Microsoft.DPrep.ReferenceActivityBlock",
+          "arguments": {
+            "reference": {
+              "referenceType": 1,
+              "referenceContainerPath": "./sampleReviews.dsource",
+              "referencedActivityId": "bd954fe8-f3bf-47af-8a6c-57813a30fcc6",
+              "referencedBranchId": null,
+              "referencedStep": null,
+              "anonymousSteps": null
+            }
+          }
+        },
+        {
+          "id": "925d2707-8b28-42e3-ac05-75ac4b4abe2e",
+          "type": "Microsoft.DPrep.SampleBlock",
+          "arguments": {
+            "samples": [
+              {
+                "sampleId": "d51e3cba-505a-4ec2-bbc7-febe21c33a56",
+                "sampleRevision": "e26e2332-591b-40d9-bf0a-9a8484d92d44",
+                "sampleRunner": {
+                  "id": null,
+                  "type": 0
+                },
+                "remoteGeneratorProperties": {},
+                "sampleStrategy": 3,
+                "topArguments": {
+                  "sampleCount": 10000
+                },
+                "randomNArguments": {
+                  "sampleCount": 10000
+                },
+                "randomPercentArguments": {
+                  "probability": 0.1
+                },
+                "allowAutoGen": true,
+                "isDisabled": false
+              }
+            ],
+            "activeSample": "d51e3cba-505a-4ec2-bbc7-febe21c33a56"
+          }
+        },
+        {
+          "id": "b1892234-b09d-4602-9f3c-4042c1da9e37",
+          "type": "Microsoft.DPrep.CustomBlock",
+          "arguments": {
+            "customBlock": "df = df.apply(lambda x: x.astype(str).str.lower())",
+            "codeBlockType": 0
+          }
+        }
+      ],
+      "inspectors": [
+        {
+          "id": "c284240a-96db-4986-8eff-ce6407277ae4",
+          "type": "Microsoft.DPrep.DataQualityInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "55ffa822-0894-4110-b6e3-00f9139bd5fe",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": true
+        }
+      ]
+    }
+  ],
+  "runConfigurations": []
+}
