@@ -1,4 +1,4 @@
-# Reviewer-1: add empty row before each row with comment. This will make the code more readable.
+# Sentiment Analysis of Movie Reviews using Deep Learning
 
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation
@@ -9,21 +9,29 @@ from keras.preprocessing import sequence
 from keras.datasets import imdb
 from azureml.dataprep.package import run
 import h5py
-
-
 import numpy as np
 import pandas as pd
 import csv
 import argparse
 
-# Reviewer-1: add description of this function
 def read_reviews_from_csv(dataset):
+    '''
+    Reads the csv file containing reviews and sentiments.
+    @param
+        dataset = input dataset
+    @returns:
+        df:       a dataframe containing the reviews and sentiments
+    '''
     df = pd.read_csv(dataset, encoding='cp437', sep='|')
     df = df.apply(lambda x: x.astype(str).str.lower())
     return df
 
-# Reviewer-1: add description of this function
 def train_model(ratio=.5):
+    '''
+    Main function to build the model. The funcion sets parameters for building the model.
+    @returns:
+        model:       model built using the reviews
+    '''
     #set parameters:
     max_features = 5000
     maxlen = 400
@@ -35,7 +43,6 @@ def train_model(ratio=.5):
     epochs = 2
     seed = 113
     # get the reviews_list and labels_ist from the csv file
-                                                               # Reviewer-1: remove this empty line
     df = read_reviews_from_csv('sampleReviews.txt')
 
     rows, columns = df.shape
@@ -46,7 +53,6 @@ def train_model(ratio=.5):
         try:
             labels_list.append(int(float(df.iloc[i,1])))
             reviews_list.append(df.iloc[i,0])
-            # print(df.iloc[i,0] + ' ' + df.iloc[i,1])           # Reviewer-1: remove this line
         except UnicodeEncodeError:
             pass
 
@@ -126,7 +132,7 @@ def get_vectors_from_text(dataset_list,word_to_ind=imdb.get_word_index(),
                 continue
             x_predict.append(word_to_ind[review_string_list[i]])
         x_train.append((x_predict))
-    # add te start char and also take care of indexfrom
+    # add start char and also take care of indexfrom
     if start_char is not None:
         x_train = [[start_char] + [w + index_from for w in x] for x in x_train]
     elif index_from:
