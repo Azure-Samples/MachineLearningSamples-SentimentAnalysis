@@ -42,14 +42,12 @@ Labs: Contains all the hands-on labs  
 
 The order of Hands-on Labs to carry out the solution is as follows:
 
-1. Data Preparation:
-The file related to Data Preparation in the Data folder is sampleReviews.txt
-2. Modeling and Evaluation:
-The main file related to modeling and evaluation in the code folder is SentimentExtraction.py
-3. Modeling and Evaluation in Docker:
-The main file for this task in the code folder is SentimentExtractionDocker.py
-4. Operationalization:
-The main files for performing operationalization are the model (sentModel.h5), senti_schema.py, myschema.json and conda_dependencies.yml. They are located in Code/Operaionalization
+| Order| File Name | Realted Files |
+|--|-----------|------|
+| 1 | `DataPreparation.md` | 'Data/sampleReviews.txt' |
+| 2 | `ModelingAndEvaluation.md` | 'Code/SentimentExtraction.py.py' |
+| 3 | `ModelingAndEvaluationDocker.md` | 'Code/SentimentExtractionDocker.py' |
+| 4 | `Operationalization.md` | 'Code/Operaionalization' |
 
 ## Conclusion
 
