@@ -1,3 +1,5 @@
+# Reviewer-1: add empty row before each row with comment. This will make the code more readable.
+
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation
 from keras.layers import Embedding
@@ -14,11 +16,13 @@ import pandas as pd
 import csv
 import argparse
 
+# Reviewer-1: add description of this function
 def read_reviews_from_csv(dataset):
     df = pd.read_csv(dataset, encoding='cp437', sep='|')
     df = df.apply(lambda x: x.astype(str).str.lower())
     return df
-    
+
+# Reviewer-1: add description of this function
 def train_model(ratio=.5):
     #set parameters:
     max_features = 5000
@@ -31,7 +35,7 @@ def train_model(ratio=.5):
     epochs = 2
     seed = 113
     # get the reviews_list and labels_ist from the csv file
-
+                                                                # Reviewer-1: delete this row
     df = run('sampleReviews.dprep', dataflow_idx=0)
 
     rows, columns = df.shape
@@ -42,7 +46,7 @@ def train_model(ratio=.5):
         try:
             labels_list.append(int(float(df.iloc[i,1])))
             reviews_list.append(df.iloc[i,0])
-            # print(df.iloc[i,0] + ' ' + df.iloc[i,1])
+            # print(df.iloc[i,0] + ' ' + df.iloc[i,1])     # Reviewer-1: remove this row
         except UnicodeEncodeError:
             pass
 

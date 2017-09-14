@@ -8,9 +8,10 @@ import pandas
 import numpy as np
 
 # Prepare the web service definition by authoring
-# init() and run() functions. Test the fucntions
+# init() and run() functions. Test the functions
 # before deploying the web service.
 
+# Reviewer-1: add description of this function
 def init():
     from sklearn.externals import joblib
     from keras.models import Sequential
@@ -21,6 +22,7 @@ def init():
     global model
     model = load_model('sentModel.h5')
 
+# Reviewer-1: add description of this function
 def run(input_df):
     import json
     from keras.models import Sequential
@@ -109,6 +111,8 @@ def run(input_df):
 
 
 if __name__ == '__main__':
+    
+    # Reviewer-1: remove this code block
     #df = pandas.DataFrame(data=[['i loved the new movie and enjoyed the great acting']], columns=['reviewText'])
     #df.dtypes
     #df
@@ -118,6 +122,7 @@ if __name__ == '__main__':
     res = run(input1)
     print(res)
 
+    # Reviewer-1: remove this code block
     #inputs = {"input_df": SampleDefinition(DataTypes.PANDAS, df)}
     # The prepare statement writes the scoring file (main.py) and
     # the scchema file (service_schema.json) the the output folder.
