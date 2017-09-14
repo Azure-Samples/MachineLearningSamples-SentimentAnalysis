@@ -1,5 +1,4 @@
-# This script generates the scoring and schema files
-# necessary to opearaitonalize Sentiment Analysis
+# This script generates the scoring and schema files necessary to opearaitonalize Sentiment Analysis
 # Init and run functions
 from azureml.api.schema.dataTypes import DataTypes
 from azureml.api.schema.sampleDefinition import SampleDefinition
@@ -11,7 +10,7 @@ import numpy as np
 # init() and run() functions. Test the functions
 # before deploying the web service.
 
-# Reviewer-1: add description of this function
+# init loads the model (global)
 def init():
     from sklearn.externals import joblib
     from keras.models import Sequential
@@ -22,7 +21,7 @@ def init():
     global model
     model = load_model('sentModel.h5')
 
-# Reviewer-1: add description of this function
+# run takes an input dataframe and performs sentiment prediction
 def run(input_df):
     import json
     from keras.models import Sequential
@@ -111,21 +110,7 @@ def run(input_df):
 
 
 if __name__ == '__main__':
-    
-    # Reviewer-1: remove this code block
-    #df = pandas.DataFrame(data=[['i loved the new movie and enjoyed the great acting']], columns=['reviewText'])
-    #df.dtypes
-    #df
-
     init()
     input1 = pandas.DataFrame(data=[['i loved the new movie and enjoyed the great acting']], columns=['reviewText'])
     res = run(input1)
     print(res)
-
-    # Reviewer-1: remove this code block
-    #inputs = {"input_df": SampleDefinition(DataTypes.PANDAS, df)}
-    # The prepare statement writes the scoring file (main.py) and
-    # the scchema file (service_schema.json) the the output folder.
-    #generate_schema(run_func=run, inputs=inputs, filepath="myschema.json")
-
-
