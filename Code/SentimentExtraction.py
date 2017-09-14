@@ -165,7 +165,7 @@ def predict_review(model,review_text):
 dataset = 'sampleReviews.txt'
 review_text = 'i loved the movie'
 
-# now train the odel using the dataset
+# now train the model using the dataset
 model = train_model()
 print("Review Sentiment:", predict_review(model, review_text.lower()))
 
