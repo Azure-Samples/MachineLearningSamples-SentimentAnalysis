@@ -1,4 +1,4 @@
-# Reviewer-1: add empty row before each row with comment. This will make the code more readable.
+# Sentiment Analysis of Movie Reviews using Deep Learning
 
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation
@@ -9,22 +9,31 @@ from keras.preprocessing import sequence
 from keras.datasets import imdb
 from azureml.dataprep.package import run
 import h5py
-
-
 import numpy as np
 import pandas as pd
 import csv
 import argparse
 
-# Reviewer-1: add description of this function
 def read_reviews_from_csv(dataset):
+    '''
+    Reads the csv file containing reviews and sentiments.
+    @param
+        dataset = input dataset
+    @returns:
+        df:       a dataframe containing the reviews and sentiments
+    '''
     df = pd.read_csv(dataset, encoding='cp437', sep='|')
     df = df.apply(lambda x: x.astype(str).str.lower())
     return df
 
-# Reviewer-1: add description of this function
 def train_model(ratio=.5):
-    #set parameters:
+    '''
+    Main function to build the model. The funcion sets parameters for building the model.
+    @returns:
+        model:       model built using the reviews
+    '''
+    
+    # set parameters:
     max_features = 5000
     maxlen = 400
     batch_size = 32
@@ -35,7 +44,6 @@ def train_model(ratio=.5):
     epochs = 2
     seed = 113
     # get the reviews_list and labels_ist from the csv file
-                                                                # Reviewer-1: delete this row
     df = run('sampleReviews.dprep', dataflow_idx=0)
 
     rows, columns = df.shape
@@ -46,7 +54,6 @@ def train_model(ratio=.5):
         try:
             labels_list.append(int(float(df.iloc[i,1])))
             reviews_list.append(df.iloc[i,0])
-            # print(df.iloc[i,0] + ' ' + df.iloc[i,1])     # Reviewer-1: remove this row
         except UnicodeEncodeError:
             pass
 
@@ -172,5 +179,4 @@ review_text = 'i loved the movie'
 # now train the model using the dataset
 model = train_model()
 print("Review Sentiment:", predict_review(model, review_text.lower()))
-
 model.save('./outputs/sentModel.h5')
