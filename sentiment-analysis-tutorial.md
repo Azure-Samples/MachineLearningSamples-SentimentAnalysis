@@ -1,16 +1,19 @@
-# Sentiment analysis using deep learning with Azure Machine Learning Workbench
+# Sentiment Analysis using Deep Learning with Azure Machine Learning
 
 ## Link of the Gallery GitHub Repository
-Following is the link to the public GitHub repository where all the codes are hosted:
+
+Following is the link to the public GitHub repository:
 
 [https://github.com/Azure/MachineLearningSamples-SentimentAnalysis](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis)
 
 
 ## Prerequisites
 
-* Ensure that you have properly installed Azure Machine Learning Workbench by following the [installation guide](./quick-start-installation.md).
+* An [Azure account](https://azure.microsoft.com/en-us/free/) (free trials are available).
 
-* For operationalization, it is best if you have Docker engine installed and running locally. If not, you can use the cluster option. However, running an (ACS) Azure Container Service can be expensive.
+* An installed copy of [Azure Machine Learning Workbench](./overview-what-is-azure-ml.md) following the [quick start installation guide](./quick-start-installation.md) to install the program and create a workspace.
+
+* For operationalization, it is best if you have Docker engine installed and running locally. If not, you can use the cluster option. However, running an Azure Container Service (ACS) can be expensive.
 
 * This Solution assumes that you are running Azure Machine Learning Workbench on Windows 10 with Docker engine locally installed. On a macOS, the instruction is largely the same.
 
@@ -20,19 +23,19 @@ Sentiment analysis is a well-known task in the realm of natural language process
 
 The solution is located at https://github.com/Azure/MachineLearningSamples-SentimentAnalysis
 
-## Use case overview
+## Use Case Overview
 
 The explosion of data and the proliferation of mobile devices have created lots of opportunities for customers to express their feelings and attitudes about anything and everything at anytime. This opinion or “sentiment” is often generated through social channels in the form of reviews, chats, shares, likes tweets, etc. The sentiment can be invaluable for businesses looking to improve products and services, make more informed decisions, and better promote their brands.
 
 The success of any business with sentiment data is in the ability to mine vast stores of unstructured social data for actionable insights. In this solution, we will develop deep learning models for performing sentiment analysis of movie reviews using AMLWorkbench
 
-## Data description
+## Data Description
 
 The dataset used to perform sentiment analysis using Deep Learning is a small hand-crafted dataset and is located in the Data folder.
 
 The first column contains movie reviews and the second column includes sentiment (0 - negative and 1 - positive). The dataset is merely used for demonstration purposes but typically to get robust sentiment scores, you need a large dataset. For example, the [IMDB Movie reviews sentiment classification problem](https://keras.io/datasets/#datasets ) from keras consists of a dataset of 25,000 movies reviews from IMDB, labeled by sentiment (positive or negative). The intention of this lab was to show you how to perform sentiment analysis using Deep Learning with AMLWorkbench.
 
-## Tutorial structure
+## Scenario Structure
 
 The folder structure is arranged as follows:
 
