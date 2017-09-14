@@ -39,9 +39,9 @@ The first column contains movie reviews and the second column includes sentiment
 
 The folder structure is arranged as follows:
 
-* Code: Contains all the code related to churn prediction using AMLWorkbench  
-* Data: Contains the dataset used in the solution  
-* Labs: Contains all the hands-on labs  
+1. Code: Contains all the code related to churn prediction using AMLWorkbench  
+2. Data: Contains the dataset used in the solution  
+3. Labs: Contains all the hands-on labs  
 
 The order of Hands-on Labs to carry out the solution is as follows:
 
