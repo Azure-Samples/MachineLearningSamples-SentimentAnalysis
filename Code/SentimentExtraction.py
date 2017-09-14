@@ -32,7 +32,6 @@ def train_model(ratio=.5):
     @returns:
         model:       model built using the reviews
     '''
-    
     # set parameters:
     max_features = 5000
     maxlen = 400
