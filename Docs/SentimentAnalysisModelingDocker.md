@@ -2,7 +2,7 @@
 
 ## 1. Objectives
 
-The aim of this lab is to generate sentiment classifier in a docker container on the local computer. The .dprep file created in the previous lab cannot be reused as there’s no support yet for running it in a docker container. Hence, we will reproduce the steps captured in data preparation using pandas to be able to run in a docker container.
+The aim of this lab is to generate sentiment classifier in a docker container on the local computer. In this lab, we will reproduce the steps captured in data preparation using pandas to be able to run in a docker container.
 
 ## 2. Data Preparation
 
