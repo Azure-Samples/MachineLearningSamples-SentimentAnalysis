@@ -157,13 +157,13 @@ The above function converts review text into vectors using get_vectors_from_text
 
 In this guide, we show how to build a sequential model which is a linear stack of layers. The model consists of the following types of layers:
 
-6.1. Embedding layer that transforms words into their corresponding word embeddings. The weights of the Embedding layer are of the shape (vocabulary_size, embedding_dimension).
+6.1. Embedding layer: This layer transforms words into their corresponding word embeddings. The weights of the Embedding layer are of the shape (vocabulary_size, embedding_dimension).
 
-6.2. Dropout layer that includes regularization, which aims to reduce the complexity of the model with the goal to prevent overfitting.
+6.2. Dropout layer: This layer includes regularization, which aims to reduce the complexity of the model with the goal to prevent overfitting.
 
-6.3. ID Convolution layer. This layer creates a convolution kernel that is convolved with the layer input over a single spatial (or temporal) dimension to produce a tensor of outputs.
+6.3. ID Convolution layer: This layer creates a convolution kernel that is convolved with the layer input over a single spatial (or temporal) dimension to produce a tensor of outputs.
 
-6.4. Activation layer that applies an activation function to a layer.
+6.4. Activation layer: applies an activation function to a layer.
 
 6.5. Global max pooling layer
 
