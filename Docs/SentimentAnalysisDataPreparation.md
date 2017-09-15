@@ -20,6 +20,7 @@ The aim of this guide is to demonstrate how the data preparation tools of Azure 
 Data Preparation is part of the Azure Machine Learning client experience. Data Preparation provides a set of flexible tools to help explore, discover, understand and fix problems in the raw data file before consuming it for modeling.
 
 3.1.	Select Data Sources and click the + sign to add Data Source.
+
 3.2.	In the Add Data Source wizard, select File (Data/sampleReviews.txt **AT** LINK TO THE DATA FILE HERE) and provide the path of the local file.
 
 ![Datasource](Images/AddDataSource.png)
