@@ -15,7 +15,7 @@ This guide shows:
 
 ## 2. Problem
 
-The IMDB movie dataset can contain of highly polar moving reviews (good or bad) for training and testing **AT** I DON@T UNDERSTAND WHAT "HIGHLY POLAR MOVING REVIEWS" MEANS. In this problem, we will use a small dataset of movie reviews to perform modeling and determine whether a given movie review has a positive or negative sentiment.
+The IMDB movie dataset consists of moving reviews with positive and negative sentiment. In this problem, we will use a small dataset of movie reviews to perform modeling and determine whether a given movie review has a positive or negative sentiment.
 
 ## 3. CNTK Backend
 
@@ -23,7 +23,7 @@ If you do not have Keras installed, you can install it using
 ```
 pip install keras
 ```
-**AT** IS THIS RUN FROM THE AML CLI? DESCRIBE HOW TO DO THIS. If you have run this command at least once, you will find the Keras configuration file at:
+If you have run this command at least once, you will find the Keras configuration file at:
 
 ```
 C:\Users\<username>\.keras\keras.json
