@@ -50,8 +50,7 @@ senti_schema.py
 
 ## 3. Image Creation
 
-Edit the conda_dependencies.yml to contain only the following content:
-name: project_environment
+Edit the conda_dependencies.yml to contain only the following dependencies:
 
 ```
 dependencies:
