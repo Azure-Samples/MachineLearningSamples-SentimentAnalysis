@@ -1,6 +1,6 @@
 # Sentiment Analysis using Deep Learning: Modeling in Docker
 
-**AT** POINT TO THE SCRIPT WHICH EXECUTES THESE STEPS. PERHAPS YOU COULD COMBINE THIS MD FILE AND THE PYTHON SCRIPT INTO A JUPYTER NOTEBOOK.
+The script that executes the below steps is
 
 ## 1. Objectives
 
