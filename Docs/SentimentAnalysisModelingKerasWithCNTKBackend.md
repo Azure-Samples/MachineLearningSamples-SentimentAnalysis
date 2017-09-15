@@ -52,7 +52,7 @@ keras.json details:
 
 ## 4. Loading Movie Review Data
 
-The train_model() function loads the review dataset (from lab1 **AT** LINK TO THE MD FILE) and builds a deep learning model. Utilize the dprep file created after transformations to load in train_model:
+The train_model() function loads the [review dataset](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Data/sampleReviews.txt) and builds a deep learning model. Utilize the dprep file created after transformations to load in train_model:
 
 ```
 df = run('sampleReviews.dprep', dataflow_idx=0)
