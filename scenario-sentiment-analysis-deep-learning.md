@@ -74,4 +74,4 @@ The order of Hands-on Labs to carry out the solution is as follows:
 
 ## Conclusion
 
-In conclusion, this solution introduces you to using Deep Learning to perform sentiment analysis with the AMLWorkbench. The solution presented is flexible to use CNTK/Tensorflow as the backend with Keras. In addition, we also operationalize using HDF5 models.
+In conclusion, this solution introduces you to using Deep Learning to perform sentiment analysis with the Azure Machine Learning Workbench. The solution presented is flexible to use CNTK/Tensorflow as the backend with Keras. In addition, we also operationalize using HDF5 models.
