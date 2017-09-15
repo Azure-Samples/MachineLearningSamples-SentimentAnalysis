@@ -1,6 +1,6 @@
 # Sentiment Analysis using Deep Learning: Modeling in Docker
 
-The script that executes the below steps is
+The script that executes the below steps is [SentimentExtractionDocker.py](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Code/SentimentExtractionDocker.py)
 
 ## 1. Objectives
 
