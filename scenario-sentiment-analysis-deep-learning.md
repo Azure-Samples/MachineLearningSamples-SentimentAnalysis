@@ -47,9 +47,9 @@ The order of Hands-on Labs to carry out the solution is as follows:
 
 | Order| File Name | Related Files |
 |--|-----------|------|
-| 1 | `DataPreparation.md` | 'Data/sampleReviews.txt' |
-| 2 | `ModelingAndEvaluation.md` | 'Code/SentimentExtraction.py' |
-| 3 | `ModelingAndEvaluationDocker.md` | 'Code/SentimentExtractionDocker.py' |
+| 1 | [`DataPreparation.md`](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Docs/SentimentAnalysisDataPreparation.md) | 'Data/sampleReviews.txt' |
+| 2 | [`ModelingAndEvaluation.md`](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Docs/SentimentAnalysisModelingDocker.md) | 'Code/SentimentExtraction.py' |
+| 3 | [`ModelingAndEvaluationDocker.md`](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Docs/SentimentAnalysisModelingKerasWithCNTKBackend.md) | 'Code/SentimentExtractionDocker.py' |
 | 4 | [`Operationalization.md`](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Docs/SentimentAnalysisOperationalization.md) | 'Code/Operaionalization' |
 
 **AT** I THINK THIS SECTION NEEDS SOME WORK. WHERE SHOULD THE READER GO FIRST TO GET STARTED? WHERE IS THE LABS FOLDER? THE NAMES OF FILES IN THE TABLE ABOVE DO NOT CORRESPOND TO THE ACTUAL FILENAMES IN THE DOCS FOLDER.
