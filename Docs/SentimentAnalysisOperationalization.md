@@ -89,7 +89,7 @@ You will find the image id displayed when you create the image. Use the image id
 ```
 az ml image usage -i 9bebf880-dc0d-4b2c-9e00-f19f8e09102a
 ```
-In some cases, you may have more than one image and to list them, you can run az ml image list.
+In some cases, you may have more than one image and to list them, you can run ```az ml image list```
 
 Ensure local is used as the deployment environment:
 
