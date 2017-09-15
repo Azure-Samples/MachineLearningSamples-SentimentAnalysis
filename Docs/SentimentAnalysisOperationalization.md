@@ -66,7 +66,18 @@ dependencies:
     - h5py
 ```
 
-We have removed ipykernel as we will not be needing it. The following command creates an image which can be used in any environment.
+We have removed ipykernel as we will not be needing it. 
+
+### Model Management
+
+The real-time web service requires a modelmanagement account. This can be created using the following commands:
+```
+az group create -l <location> -n <name>
+az ml account modelmanagement create -l <location> -g <resource group> -n <account name>
+az ml account modelmanagement set -n <account name> -g <resource group>
+```
+
+The following command creates an image which can be used in any environment.
 
 ```
 az ml image create -n ads1 -v -c conda_dependencies.yml -m sentModel.h5 -s myschema.json -f senti_schema.py -r python
