@@ -1,8 +1,10 @@
 # Sentiment Analysis using Deep Learning: Modeling in Docker
 
+**AT** POINT TO THE SCRIPT WHICH EXECUTES THESE STEPS. PERHAPS YOU COULD COMBINE THIS MD FILE AND THE PYTHON SCRIPT INTO A JUPYTER NOTEBOOK.
+
 ## 1. Objectives
 
-The aim of this lab is to generate sentiment classifier in a docker container on the local computer. In this lab, we will reproduce the steps captured in data preparation using pandas to be able to run in a docker container.
+The aim of this guide is to show how to create a sentiment classifier in a docker container on your local computer. In this lab, we will reproduce the steps captured in data preparation using pandas to be able to run in a docker container.
 
 ## 2. Data Preparation
 
@@ -42,8 +44,8 @@ az ml experiment submit -c docker SentimentExtractionDocker.py
 
 This command pulls down a base docker image, layers a conda environment on the base image based on the conda_dependencies.yml file in your_aml_config_ directory, and then starts a Docker container. You will be able to see the dependencies as follows.
 
-![BaseDockerImage](https://github.com/Azure/Vienna-Learning-Path/blob/master/Data%20Scientist/SentimentAnalysisDL/Labs/Images/BaseDockerImage.png)
+![BaseDockerImage](https://github.com/Azure/Vienna-Learning-Path/blob/master/Data%20Scientist/SentimentAnalysisDL/Labs/Images/BaseDockerImage.png) **AT** LINK BROKEN
 
 It then executes your script. You should see some Docker image construction messages in the CLI window. In the end, on successful execution, you will see result as shown below.
 
-![DockerCLIWindow](https://github.com/Azure/Vienna-Learning-Path/blob/master/Data%20Scientist/SentimentAnalysisDL/Labs/Images/DockerCLIWindow.png)
+![DockerCLIWindow](https://github.com/Azure/Vienna-Learning-Path/blob/master/Data%20Scientist/SentimentAnalysisDL/Labs/Images/DockerCLIWindow.png)  **AT** LINK BROKEN

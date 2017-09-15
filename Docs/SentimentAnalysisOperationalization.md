@@ -2,7 +2,7 @@
 
 ## 1. Objectives
 
-The aim of this lab is to publish the sentiment analysis model (hd5) and code as web services locally using a DSVM running on Azure.
+The aim of this guide is to show how to publish the sentiment analysis model (hd5) and code as web services locally using a DSVM running on Azure.
 
 ## 2. Setup
 
@@ -124,7 +124,7 @@ az ml service run realtime -i sentiservice -d "{\"input_df\": [{\"reviewText\": 
 
 ![Sentiservice](Images/Sentiservice.png)
 
-The model built was on a small dataset. Hence, you will find the sentiment scores are not robust. In comparison, the IMDB Movie reviews sentiment classification problem (https://keras.io/datasets/#datasets ) from keras consists of a dataset of 25,000 movies reviews from IMDB, labeled by sentiment (positive/negative). The intention of this lab was to show you how to perform sentiment analysis using Deep Learning with AMLWorkbench.
+The model built was on a small dataset. Hence, you will find the sentiment scores are not robust. In comparison, the IMDB Movie reviews sentiment classification problem (https://keras.io/datasets/#datasets ) from Keras consists of a dataset of 25,000 movies reviews from IMDB, labeled by sentiment (positive/negative). The intention of this lab was to show you how to perform sentiment analysis using deep learning with AMLWorkbench.
 
 ## Exercise
 

@@ -3,13 +3,11 @@
 
 ## 1. Objectives
 
-The aim of this lab is to understand how Vienna’s Data Preparation tools can be used to clean and ingest IMDB Movie review data for predicting sentiment using Deep Learning.
-
-The objective of this lab is to use CNTK as the backend for Keras (a model level library, providing high-level building blocks for developing deep learning models) and implement sentiment analysis from movie reviews.
+The aim of this guide is to demonstrate how the data preparation tools of Azure Machine Learning Workbench can be used to clean and ingest IMDB Movie review data for predicting sentiment using deep learning.
 
 ## 2. Setup
 
-2.1. Begin the lab by creating a New Project by selecting the plus sign from Recent Projects.
+2.1. Begin by creating a New Project by selecting the plus sign from Recent Projects.
 
 ![NewProject](Images/NewProject.png)
 
@@ -19,10 +17,10 @@ The objective of this lab is to use CNTK as the backend for Keras (a model level
 
 ## 3. Data Source
 
-Data Preparation is part of the Vienna client experience and installed with it. Data Preparation provides a set of flexible tools to help explore, discover, understand and fix problems in the raw data file before consuming it for modeling.
+Data Preparation is part of the Azure Machine Learning client experience. Data Preparation provides a set of flexible tools to help explore, discover, understand and fix problems in the raw data file before consuming it for modeling.
 
 3.1.	Select Data Sources and click the + sign to add Data Source.
-3.2.	In the Add Data Source wizard, select File (from git data folder) and provide the path of the local file.
+3.2.	In the Add Data Source wizard, select File (Data/sampleReviews.txt **AT** LINK TO THE DATA FILE HERE) and provide the path of the local file.
 
 ![Datasource](Images/AddDataSource.png)
 
@@ -34,7 +32,7 @@ Data Preparation is part of the Vienna client experience and installed with it. 
 
 ![DataTypes](Images/DataTypes.png)
 
-3.5. In the Sampling part of Add Data Source wizard, select sample: “Top 10000 (Active)” and leave all other options default. Vienna allows users to have multiple samples per data source. The Active indicator lets the user choose which sample to use when displaying the data source.
+3.5. In the Sampling part of Add Data Source wizard, select sample: “Top 10000 (Active)” and leave all other options default. AMLWorkbench allows users to have multiple samples per data source. The Active indicator lets the user choose which sample to use when displaying the data source.
 
 ![SamplingPart](Images/SamplingPart.png)
 

@@ -2,7 +2,7 @@
 
 ## Link of the Gallery GitHub Repository
 
-Following is the link to the public GitHub repository:
+Follow this link to the public GitHub repository:
 
 [https://github.com/Azure/MachineLearningSamples-SentimentAnalysis](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis)
 
@@ -19,38 +19,40 @@ Following is the link to the public GitHub repository:
 
 ## Introduction
 
-Sentiment analysis is a well-known task in the realm of natural language processing. Given a set of texts, the objective is to determine the polarity of that text. The objective of this solution is to use CNTK as the backend for Keras (a model level library, providing high-level building blocks for developing deep learning models) and implement sentiment analysis from movie reviews.
+Sentiment analysis is a well-known task in the realm of natural language processing. Given a set of texts, the objective is to determine the polarity of that text. **AT** I THINK POLARITY IS THE WRONG WORD HERE. MAYBE CHANGE TO "SENTIMENT" OR "THE ATTITUDE OF THE SPEAKER WITH RESPECT TO THE SUBJECT" The objective of this solution is to use CNTK as the backend for Keras (a model level library, providing high-level building blocks for developing deep learning models) and implement sentiment analysis from movie reviews.
 
 The solution is located at https://github.com/Azure/MachineLearningSamples-SentimentAnalysis
 
 ## Use Case Overview
 
-The explosion of data and the proliferation of mobile devices have created lots of opportunities for customers to express their feelings and attitudes about anything and everything at anytime. This opinion or “sentiment” is often generated through social channels in the form of reviews, chats, shares, likes tweets, etc. The sentiment can be invaluable for businesses looking to improve products and services, make more informed decisions, and better promote their brands.
+The explosion of data and the proliferation of mobile devices have created lots of opportunities for customers to express their feelings and attitudes about anything and everything at any time. This opinion or “sentiment” is often generated through social channels in the form of reviews, chats, shares, likes, tweets, etc. The sentiment can be invaluable for businesses looking to improve products and services, make more informed decisions, and better promote their brands.
 
-The success of any business with sentiment data is in the ability to mine vast stores of unstructured social data for actionable insights. In this solution, we will develop deep learning models for performing sentiment analysis of movie reviews using AMLWorkbench
+To get value from sentiment analysis, businesses must have the ability to mine vast stores of unstructured social data for actionable insights. In this sample, we will develop deep learning models for performing sentiment analysis of movie reviews using AMLWorkbench
 
 ## Data Description
 
-The dataset used to perform sentiment analysis using Deep Learning is a small hand-crafted dataset and is located in the Data folder.
+The dataset used for this sample is a small hand-crafted dataset and is located in the Data folder of the [Github repository](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/Data).
 
-The first column contains movie reviews and the second column includes sentiment (0 - negative and 1 - positive). The dataset is merely used for demonstration purposes but typically to get robust sentiment scores, you need a large dataset. For example, the [IMDB Movie reviews sentiment classification problem](https://keras.io/datasets/#datasets ) from keras consists of a dataset of 25,000 movies reviews from IMDB, labeled by sentiment (positive or negative). The intention of this lab was to show you how to perform sentiment analysis using Deep Learning with AMLWorkbench.
+The first column contains movie reviews and the second column contains their sentiment (0 - negative and 1 - positive). The dataset is merely used for demonstration purposes but typically to get robust sentiment scores, you need a large dataset. For example, the [IMDB Movie reviews sentiment classification problem](https://keras.io/datasets/#datasets ) from Keras consists of a dataset of 25,000 movies reviews from IMDB, labeled by sentiment (positive or negative). The intention of this lab is to show you how to perform sentiment analysis using deep learning with AMLWorkbench.
 
 ## Scenario Structure
 
 The folder structure is arranged as follows:
 
-1. Code: Contains all the code related to churn prediction using AMLWorkbench  
+1. Code: Contains all the code related to sentiment analysis using AMLWorkbench  
 2. Data: Contains the dataset used in the solution  
 3. Labs: Contains all the hands-on labs  
 
 The order of Hands-on Labs to carry out the solution is as follows:
 
-| Order| File Name | Realted Files |
+| Order| File Name | Related Files |
 |--|-----------|------|
 | 1 | `DataPreparation.md` | 'Data/sampleReviews.txt' |
-| 2 | `ModelingAndEvaluation.md` | 'Code/SentimentExtraction.py.py' |
+| 2 | `ModelingAndEvaluation.md` | 'Code/SentimentExtraction.py' |
 | 3 | `ModelingAndEvaluationDocker.md` | 'Code/SentimentExtractionDocker.py' |
 | 4 | `Operationalization.md` | 'Code/Operaionalization' |
+
+**AT** I THINK THIS SECTION NEEDS SOME WORK. WHERE SHOULD THE READER GO FIRST TO GET STARTED? WHERE IS THE LABS FOLDER? THE NAMES OF FILES IN THE TABLE ABOVE DO NOT CORRESPOND TO THE ACTUAL FILENAMES IN THE DOCS FOLDER.
 
 ## Conclusion
 

@@ -1,23 +1,29 @@
 # Sentiment Analysis using Deep Learning: Modeling  - Keras with CNTK Backend
 
+**AT** LINK TO PYTHON SCRIPT. OR COMBINE INTO A JUPYTER NOTEBOOK.
+
 ## 1. Objectives
 
-Keras does not handle itself low-level operations such as convolutions Instead, it relies on a specialized, well-optimized library to do so, serving as the "backend engine" of Keras. Keras being modular, several different backend engines can be plugged seamlessly into Keras.
+Keras does not handle low-level operations such as convolutions itself. Instead, it relies on a specialized, well-optimized library to do so, serving as the "backend engine" of Keras. Keras being modular, several different backend engines can be plugged seamlessly into Keras.
 
-The objective of this lab is to use CNTK as the backend for Keras and implement sentiment analysis from movie reviews using Deep Learning.
+The objective of this guide is to use CNTK as the backend for Keras and implement sentiment analysis from movie reviews using deep learning.
 
-At the end of this lab, you will know:
+This guide shows:
 * How to import movie reviews and perform preprocessing
-* How to use word embedding for natural language problems
+* How to use word embeddings for natural language problems
 * How to train a recurrent convolutional network on the IMDB sentiment classification task
 
 ## 2. Problem
 
-IMDB movie dataset can contain of highly polar moving reviews (good or bad) for training and testing. In this problem, we will use a small dataset of movie reviews to perform modeling and determine whether a given moving review has a positive or negative sentiment.
+The IMDB movie dataset can contain of highly polar moving reviews (good or bad) for training and testing **AT** I DON@T UNDERSTAND WHAT "HIGHLY POLAR MOVING REVIEWS" MEANS. In this problem, we will use a small dataset of movie reviews to perform modeling and determine whether a given movie review has a positive or negative sentiment.
 
 ## 3. CNTK Backend
 
-If you do not have keras installed, you can install it using ‘pip install keras’. If you have run Keras at least once, you will find the Keras configuration file at:
+If you do not have Keras installed, you can install it using
+```
+pip install keras
+```
+**AT** IS THIS RUN FROM THE AML CLI? DESCRIBE HOW TO DO THIS. If you have run this command at least once, you will find the Keras configuration file at:
 
 ```
 C:\Users\<username>\.keras\keras.json
@@ -36,7 +42,7 @@ If it isn't there, you can create it. The default configuration file looks like 
 
 Change the field backend to "cntk", and Keras will use the new configuration next time you run any Keras code.
 
-keras.json details
+keras.json details:
 
 * **image_data_format**: string, either **"channels_last"** or **"channels_first"**. It specifies which data format convention Keras will follow. (**keras.backend.image_data_format()** returns it.)
 * For 2D data (e.g. image), **"channels_last"** assumes **(rows, cols, channels)** while **"channels_first"** assumes **(channels, rows, cols)**. 
@@ -46,7 +52,7 @@ keras.json details
 
 ## 4. Loading Movie Review Data
 
-The train_model() function loads the review dataset (from lab1) and builds a deep learning model. Utilize the dprep file created after transformations to load in train_model:
+The train_model() function loads the review dataset (from lab1 **AT** LINK TO THE MD FILE) and builds a deep learning model. Utilize the dprep file created after transformations to load in train_model:
 
 ```
 df = run('sampleReviews.dprep', dataflow_idx=0)
@@ -67,10 +73,10 @@ df = run('sampleReviews.dprep', dataflow_idx=0)
 
 * **max_features**: sets the vocabulary size. If we are only interested in the first 5,000 most used words in the dataset, vocabulary size will be 5,000.
 * **maxlen**: maxlen is used to truncate or pad the dataset to a length of maxlen for each observation using the sequence.pad_sequences() function.
-* **batch_size**: number of samples that going to be propagated through the network.
+* **batch_size**: number of samples that are going to be propagated through the network.
 * **epochs**: an arbitrary cutoff, defined as "one pass over the entire dataset”
 * **embedding_dims**: dimension of the dense embedding
-* **filters**: number output of filters in the convolution
+* **filters**: number of filters in the convolution
 * **kernel_size**: length of the 1D convolution window
 * **hidden_dims**: used for the dimensionality of the output space of Dense layer
 
@@ -149,7 +155,7 @@ The above function converts review text into vectors using get_vectors_from_text
 
 ## 6. Model
 
-In this lab, we build a sequential model which is a linear stack of layers. The model consists of the following types of layers:
+In this guide, we show how to build a sequential model which is a linear stack of layers. The model consists of the following types of layers:
 
 6.1. Embedding layer that transforms words into their corresponding word embeddings. The weights of the Embedding layer are of the shape (vocabulary_size, embedding_dimension).
 
