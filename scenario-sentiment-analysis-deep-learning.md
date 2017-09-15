@@ -9,7 +9,7 @@ Follow this link to the public GitHub repository:
 
 ## Introduction
 
-Sentiment analysis is a well-known task in the realm of natural language processing. Given a set of texts, the objective is to determine the polarity of that text. **AT** I THINK POLARITY IS THE WRONG WORD HERE. MAYBE CHANGE TO "SENTIMENT" OR "THE ATTITUDE OF THE SPEAKER WITH RESPECT TO THE SUBJECT" The objective of this solution is to use CNTK as the backend for Keras (a model level library, providing high-level building blocks for developing deep learning models) and implement sentiment analysis from movie reviews.
+Sentiment analysis is a well-known task in the realm of natural language processing. Given a set of texts, the aim is to determine the sentiment of that text. The objective of this solution is to use CNTK as the backend for Keras (a model level library, providing high-level building blocks for developing deep learning models) and implement sentiment analysis from movie reviews.
 
 The solution is located at https://github.com/Azure/MachineLearningSamples-SentimentAnalysis
 
