@@ -21,7 +21,7 @@ Data Preparation is part of the Azure Machine Learning client experience. Data P
 
 3.1.	Select Data Sources and click the + sign to add Data Source.
 
-3.2.	In the Add Data Source wizard, select File (Data/sampleReviews.txt **AT** LINK TO THE DATA FILE HERE) and provide the path of the local file.
+3.2.	In the Add Data Source wizard, select File and provide the path of the [reviews file](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Data/sampleReviews.txt).
 
 ![Datasource](Images/AddDataSource.png)
 
