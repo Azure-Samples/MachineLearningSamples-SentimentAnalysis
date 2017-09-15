@@ -1,6 +1,6 @@
 ---
-title: Document Collection Analysis | Microsoft Docs
-description: How to summarize and analyze a large collection of documents, including techniques such as phrase learning, topic modeling, and topic model analysis using Azure ML Workbench.
+title: Sentiment Analysis using Deep Learning with Azure Machine Learning | Microsoft Docs
+description: How to perform sentiment analysis using deep learning with Azure ML Workbench.
 services: machine-learning
 documentationcenter: ''
 author: miprasad
@@ -16,7 +16,6 @@ ms.topic: article
 ms.date: 09/16/2017
 ms.author: miprasad
 ---
-
 
 
 # Sentiment Analysis using Deep Learning with Azure Machine Learning
