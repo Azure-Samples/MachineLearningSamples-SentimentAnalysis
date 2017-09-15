@@ -42,10 +42,10 @@ If you have a Docker engine running locally, in the CLI window, run the below co
 az ml experiment submit -c docker SentimentExtractionDocker.py
 ```
 
-This command pulls down a base docker image, layers a conda environment on the base image based on the conda_dependencies.yml file in your_aml_config_ directory, and then starts a Docker container. You will be able to see the dependencies as follows.
+This command pulls down a base docker image, layers a conda environment on the base image based on the conda_dependencies.yml file in your_aml_config_ directory, and then starts a Docker container. You will be able to see the dependencies as follows:
 
-![BaseDockerImage](https://github.com/Azure/Vienna-Learning-Path/blob/master/Data%20Scientist/SentimentAnalysisDL/Labs/Images/BaseDockerImage.png) **AT** LINK BROKEN
+![BaseDockerImage](Images/BaseDockerImage.png)
 
-It then executes your script. You should see some Docker image construction messages in the CLI window. In the end, on successful execution, you will see result as shown below.
+It then executes your script. You should see some Docker image construction messages in the CLI window. In the end, on successful execution, you will see result as shown below with the sentiment score.
 
-![DockerCLIWindow](https://github.com/Azure/Vienna-Learning-Path/blob/master/Data%20Scientist/SentimentAnalysisDL/Labs/Images/DockerCLIWindow.png)  **AT** LINK BROKEN
+![DockerCLIWindow](Images/DockerCLIWindow.png)
