@@ -1,6 +1,6 @@
 # Sentiment Analysis using Deep Learning: Modeling  - Keras with CNTK Backend
 
-**AT** LINK TO PYTHON SCRIPT. OR COMBINE INTO A JUPYTER NOTEBOOK.
+The script that executes the below steps is SentimentExtractionDocker.py
 
 ## 1. Objectives
 
