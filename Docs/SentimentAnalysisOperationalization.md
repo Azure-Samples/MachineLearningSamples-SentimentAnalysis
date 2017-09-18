@@ -1,4 +1,4 @@
-# Sentiment Analysis using Deep Learning: Operationalization
+U# Sentiment Analysis using Deep Learning: Operationalization
 
 ## 1. Objectives
 
@@ -25,12 +25,17 @@ If you encounter “locale.Error: unsupported locale setting” error, perform t
 ```
 export LC_ALL=C
 ```
+Update pip to the latest:
+
+```
+sudo pip install –upgrade pip
+```
 
 Install azure-cli and azure-cli-ml using pip:
 
 ```
-pip install azure-cli
-pip install azure-cli-ml
+sudo pip install azure-cli
+sudo pip install azure-cli-ml
 ```
 
 In addition, change python default version and run the following commands. Local mode deployments run in docker containers on your local computer, whether that is your personal machine or a VM running on Azure. You can use local mode for development and testing. 
