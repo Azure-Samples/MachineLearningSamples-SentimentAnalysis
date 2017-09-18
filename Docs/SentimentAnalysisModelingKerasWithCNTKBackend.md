@@ -1,3 +1,4 @@
+
 # Sentiment Analysis using Deep Learning: Modeling  - Keras with CNTK Backend
 
 The script that executes the below steps is [SentimentExtraction.py](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Code/SentimentExtraction.py)
@@ -19,6 +20,10 @@ The IMDB movie dataset consists of moving reviews with positive and negative sen
 
 ## 3. CNTK Backend
 
+If you do not have cntk installed, you can install it using
+```
+pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.2-cp35-cp35m-win_amd64.whl
+```
 If you do not have Keras installed, you can install it using
 ```
 pip install keras
