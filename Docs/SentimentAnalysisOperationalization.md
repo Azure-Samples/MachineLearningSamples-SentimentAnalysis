@@ -1,4 +1,4 @@
-U# Sentiment Analysis using Deep Learning: Operationalization
+# Sentiment Analysis using Deep Learning: Operationalization
 
 ## 1. Objectives
 
