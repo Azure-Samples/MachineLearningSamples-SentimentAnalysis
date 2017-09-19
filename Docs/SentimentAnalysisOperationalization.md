@@ -55,6 +55,13 @@ Source the ~/.bash_aliases file
 
 ```source ~/.bash_aliases```
 
+Setup azure ml environment
+
+```
+az ml env setup -n <environment name> – g <resource group> -l <location>
+az ml env set -g <resource group> -n <environment name>
+```
+
 Upload the below files to the vm (you could use scp to perform the upload):
 conda_dependencies.yml
 sentModel.h5
