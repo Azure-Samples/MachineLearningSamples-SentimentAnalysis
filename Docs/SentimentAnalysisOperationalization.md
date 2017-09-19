@@ -61,6 +61,17 @@ az ml env setup -n <environment name> – g <resource group> -l <location>
 az ml env set -g <resource group> -n <environment name>
 ```
 
+Source the file to set up your environment variables
+
+```
+source ~/.amlenvrc
+```
+
+To always set these variables when you log in, copy the export commands into your .bashrc file
+```
+cat < ~/.amlenvrc >> ~/.bashrc
+```
+
 Upload the below files to the vm (you could use scp to perform the upload):
 conda_dependencies.yml
 sentModel.h5
