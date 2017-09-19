@@ -1,3 +1,4 @@
+
 # Sentiment Analysis using Deep Learning: Operationalization
 
 ## 1. Objectives
@@ -25,9 +26,19 @@ If you encounter “locale.Error: unsupported locale setting” error, perform t
 ```
 export LC_ALL=C
 ```
-
+Change to root
+```
+sudo -i
+```
+Update pip to the latest:
+```
+pip install –-upgrade pip
+```
+Update azure to the latest:
+```
+pip install --upgrade azure
+```
 Install azure-cli and azure-cli-ml using pip:
-
 ```
 pip install azure-cli
 pip install azure-cli-ml
@@ -35,11 +46,29 @@ pip install azure-cli-ml
 
 In addition, change python default version and run the following commands. Local mode deployments run in docker containers on your local computer, whether that is your personal machine or a VM running on Azure. You can use local mode for development and testing. 
 
+Create a bash_aliases file 
+```
+gedit ~/.bash_aliases
+```
+Open your ~/.bash_aliases file and add the following and save it to home directory
 ```
 alias python=python3
+```
+Source the ~/.bash_aliases file
+```
 source ~/.bash_aliases
-az ml env setup
+```
+Setup azure ml environment
+```
+az ml env setup -n <environment name> – g <resource group> -l <location>
+az ml env set -g <resource group> -n <environment name>
+```
+Source the file to set up your environment variables
+```
 source ~/.amlenvrc
+```
+To always set these variables when you log in, copy the export commands into your .bashrc file
+```
 cat < ~/.amlenvrc >> ~/.bashrc
 ```
 Upload the below files to the vm (you could use scp to perform the upload):
