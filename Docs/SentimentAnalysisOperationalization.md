@@ -37,8 +37,8 @@ pip install --upgrade azure
 Install azure-cli and azure-cli-ml using pip:
 
 ```
-sudo pip install azure-cli
-sudo pip install azure-cli-ml
+pip install azure-cli
+pip install azure-cli-ml
 ```
 
 In addition, change python default version and run the following commands. Local mode deployments run in docker containers on your local computer, whether that is your personal machine or a VM running on Azure. You can use local mode for development and testing. 
