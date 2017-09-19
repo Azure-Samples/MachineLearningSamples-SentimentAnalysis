@@ -43,13 +43,15 @@ pip install azure-cli-ml
 
 In addition, change python default version and run the following commands. Local mode deployments run in docker containers on your local computer, whether that is your personal machine or a VM running on Azure. You can use local mode for development and testing. 
 
-```
-alias python=python3
-source ~/.bash_aliases
-az ml env setup
-source ~/.amlenvrc
-cat < ~/.amlenvrc >> ~/.bashrc
-```
+Create a bash_aliases file
+```gedit ~/.bash_aliases```
+
+Open your ~/.bash_aliases file and add the following and save it to home directory
+```alias python=python3```
+
+Source the ~/.bash_aliases file
+```source ~/.bash_aliases```
+
 Upload the below files to the vm (you could use scp to perform the upload):
 conda_dependencies.yml
 sentModel.h5
