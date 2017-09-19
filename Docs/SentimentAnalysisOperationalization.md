@@ -24,6 +24,7 @@ If you encounter “locale.Error: unsupported locale setting” error, perform t
 
 ```
 export LC_ALL=C
+
 ```
 Update pip to use the latest:
 ```
@@ -35,7 +36,6 @@ pip install --upgrade azure
 ```
 
 Install azure-cli and azure-cli-ml using pip:
-
 ```
 pip install azure-cli
 pip install azure-cli-ml
@@ -44,12 +44,15 @@ pip install azure-cli-ml
 In addition, change python default version and run the following commands. Local mode deployments run in docker containers on your local computer, whether that is your personal machine or a VM running on Azure. You can use local mode for development and testing. 
 
 Create a bash_aliases file
+
 ```gedit ~/.bash_aliases```
 
 Open your ~/.bash_aliases file and add the following and save it to home directory
+
 ```alias python=python3```
 
 Source the ~/.bash_aliases file
+
 ```source ~/.bash_aliases```
 
 Upload the below files to the vm (you could use scp to perform the upload):
