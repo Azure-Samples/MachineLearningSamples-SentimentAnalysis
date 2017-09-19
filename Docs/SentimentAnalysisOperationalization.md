@@ -25,6 +25,14 @@ If you encounter “locale.Error: unsupported locale setting” error, perform t
 ```
 export LC_ALL=C
 ```
+Update pip to use the latest:
+```
+pip install –-upgrade pip
+```
+Update azure to the latest:
+```
+pip install --upgrade azure
+```
 
 Install azure-cli and azure-cli-ml using pip:
 
