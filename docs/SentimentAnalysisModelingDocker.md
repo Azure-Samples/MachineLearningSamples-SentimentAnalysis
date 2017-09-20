@@ -44,8 +44,8 @@ az ml experiment submit -c docker SentimentExtractionDocker.py
 
 This command pulls down a base docker image, layers a conda environment on the base image based on the conda_dependencies.yml file in your_aml_config_ directory, and then starts a Docker container. You will be able to see the dependencies as follows:
 
-![BaseDockerImage](Images/BaseDockerImage.png)
+![BaseDockerImage](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/BaseDockerImage.png)
 
 It then executes your script. You should see some Docker image construction messages in the CLI window. In the end, on successful execution, you will see result as shown below with the sentiment score.
 
-![DockerCLIWindow](Images/DockerCLIWindow.png)
+![DockerCLIWindow](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/DockerCLIWindow.png)
