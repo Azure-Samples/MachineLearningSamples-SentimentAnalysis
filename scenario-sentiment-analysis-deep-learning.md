@@ -51,7 +51,7 @@ To get value from sentiment analysis, businesses must have the ability to mine v
 
 ## Data description
 
-The dataset used for this sample is a small hand-crafted dataset and is located in the Data folder of the [Github repository](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/data).
+The dataset used for this sample is a small hand-crafted dataset and is located in the data folder(https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/data).
 
 The first column contains movie reviews and the second column contains their sentiment (0 - negative and 1 - positive). The dataset is merely used for demonstration purposes but typically to get robust sentiment scores, you need a large dataset. For example, the [IMDB Movie reviews sentiment classification problem](https://keras.io/datasets/#datasets ) from Keras consists of a dataset of 25,000 movies reviews from IMDB, labeled by sentiment (positive or negative). The intention of this lab is to show you how to perform sentiment analysis using deep learning with AMLWorkbench.
 
