@@ -208,4 +208,4 @@ Select File->Open Command-Line Interface and run the following command to see re
 az ml experiment submit -c local SentimentExtraction.py
 ```
 
-![SentimentExtraction](Images/SentimentExtraction.png)
+![SentimentExtraction](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/SentimentExtraction.png)
