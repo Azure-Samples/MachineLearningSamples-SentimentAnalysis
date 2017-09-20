@@ -8,7 +8,7 @@ The aim of this guide is to show how to publish the sentiment analysis model (hd
 
 Launch a Data Science Virtual Machine (Ubuntu) from portal.azure.com as shown below. Follow the steps to create the virtual machine on selection and ssh into the machine.
 
-![DataScienceVirtualMachine](Images/DataScienceVirtualMachine.png)
+![DataScienceVirtualMachine](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/DataScienceVirtualMachine.png)
 
 Pip is a better alternative to Easy Install for installing Python packages. To install pip on ubuntu run the bellow command:
 ```
@@ -112,7 +112,7 @@ The following command creates an image which can be used in any environment.
 az ml image create -n ads1 -v -c conda_dependencies.yml -m sentModel.h5 -s myschema.json -f senti_schema.py -r python
 ```
 
-![PuttyImage](Images/PuttyImage.png)
+![PuttyImage](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/PuttyImage.png)
 
 You will find the image id displayed when you create the image. Use the image id in the next command to specify the image to use. 
 
@@ -144,7 +144,7 @@ az ml service create realtime -n sentiservice –-image-id 9bebf880-dc0d-4b2c-9e
 ```
 An example of a successful run of az ml service create looks as follows. In addition, you can also type docker ps to view the container.
 
-![DockerPs](Images/DockerPs.png)
+![DockerPs](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/DockerPs.png)
 
 Run the service (sentiservice) created using az ml service run. Note the review text created and passed to call the web service.
 
@@ -152,7 +152,7 @@ Run the service (sentiservice) created using az ml service run. Note the review 
 az ml service run realtime -i sentiservice -d "{\"input_df\": [{\"reviewText\": \"The movie was great. I liked it\"}]}"
 ```
 
-![Sentiservice](Images/Sentiservice.png)
+![Sentiservice](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/Sentiservice.png)
 
 The model built was on a small dataset. Hence, you will find the sentiment scores are not robust. In comparison, the IMDB Movie reviews sentiment classification problem (https://keras.io/datasets/#datasets ) from Keras consists of a dataset of 25,000 movies reviews from IMDB, labeled by sentiment (positive/negative). The intention of this lab was to show you how to perform sentiment analysis using deep learning with AMLWorkbench.
 
