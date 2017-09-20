@@ -9,11 +9,11 @@ The aim of this guide is to demonstrate how the data preparation tools of Azure 
 
 2.1. Begin by creating a New Project by selecting the plus sign from Recent Projects.
 
-![NewProject](Images/NewProject.png)
+![NewProject](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Docs/Images/NewProject.png)
 
 2.2. Provide a project name, project directory and select a blank project template as next steps. For the project directory, create a new directory for sentiment analysis and copy the path to project directory in the wizard.
 
-![ProjectName](Images/ProjectName.png)
+![ProjectName](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Docs/Images/ProjectName.png)
 
 ## 3. Data Source
 
@@ -23,27 +23,27 @@ Data Preparation is part of the Azure Machine Learning client experience. Data P
 
 3.2.	In the Add Data Source wizard, select File and provide the path of the [reviews file](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Data/sampleReviews.txt).
 
-![Datasource](Images/AddDataSource.png)
+![Datasource](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Docs/Images/AddDataSource.png)
 
 3.3. In the File Details part of Add Data Source wizard, leave all the default options as is. You will be able to preview the data import as shown below.
 
-![FileDetails](Images/FileDetails.png)
+![FileDetails](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/FileDetails.png)
 
 3.4. In the Data Types part of Add Data Source wizard, notice how all the numeric fields are shown with the Type: Number. If no type is specified, string is assumed. Hence, you do not need to add the type for all the categorical features.
 
-![DataTypes](Images/DataTypes.png)
+![DataTypes](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/DataTypes.png)
 
 3.5. In the Sampling part of Add Data Source wizard, select sample: “Top 10000 (Active)” and leave all other options default. AMLWorkbench allows users to have multiple samples per data source. The Active indicator lets the user choose which sample to use when displaying the data source.
 
-![SamplingPart](Images/SamplingPart.png)
+![SamplingPart](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/SamplingPart.png)
 
 3.6. Do not include path column in the Path Column part of Add Data Source wizard as we will not need this information. Select Finish.
 
-![PathColumn](Images/PathColumn.png)
+![PathColumn](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/PathColumn.png)
 
 3.7. Select Transform this data
 
-![Transform](Images/Transform.png)
+![Transform](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/Transform.png)
 
 3.8. Select Transforms -> Transform Dataflow (Script) to open the following Script window. The data imported is in the form of a dataframe df. Lower case the reviews using the expression:
 
@@ -51,7 +51,7 @@ Data Preparation is part of the Azure Machine Learning client experience. Data P
 df = df.apply(lambda x: x.astype(str).str.lower())
 ```
 
-![TransformDataFlow](Images/TransformDataflow.png)
+![TransformDataFlow](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/TransformDataflow.png)
 
 ## 4. Exercise
 
