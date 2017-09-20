@@ -9,11 +9,11 @@ The aim of this guide is to demonstrate how the data preparation tools of Azure 
 
 2.1. Begin by creating a New Project by selecting the plus sign from Recent Projects.
 
-![NewProject](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Docs/Images/NewProject.png)
+![NewProject](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/NewProject.png)
 
 2.2. Provide a project name, project directory and select a blank project template as next steps. For the project directory, create a new directory for sentiment analysis and copy the path to project directory in the wizard.
 
-![ProjectName](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Docs/Images/ProjectName.png)
+![ProjectName](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/ProjectName.png)
 
 ## 3. Data Source
 
@@ -21,9 +21,9 @@ Data Preparation is part of the Azure Machine Learning client experience. Data P
 
 3.1.	Select Data Sources and click the + sign to add Data Source.
 
-3.2.	In the Add Data Source wizard, select File and provide the path of the [reviews file](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Data/sampleReviews.txt).
+3.2.	In the Add Data Source wizard, select File and provide the path of the [reviews file](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/data/sampleReviews.txt).
 
-![Datasource](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Docs/Images/AddDataSource.png)
+![Datasource](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/AddDataSource.png)
 
 3.3. In the File Details part of Add Data Source wizard, leave all the default options as is. You will be able to preview the data import as shown below.
 
