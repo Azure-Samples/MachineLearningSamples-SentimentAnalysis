@@ -5,6 +5,7 @@ from azureml.api.schema.sampleDefinition import SampleDefinition
 from azureml.api.realtime.services import generate_schema
 import pandas
 import numpy as np
+import os
 
 # Prepare the web service definition by authoring
 # init() and run() functions. Test the functions
@@ -108,9 +109,36 @@ def run(input_df):
     pred = predict_review(model, input_df['reviewText'][0])
     return json.dumps(str(pred))
 
+def main():
+  from azureml.api.schema.dataTypes import DataTypes
+  from azureml.api.schema.sampleDefinition import SampleDefinition
+  from azureml.api.realtime.services import generate_schema
+  import pandas
+  
+  # create the outputs folder
+  os.makedirs('./outputs', exist_ok=True)
+
+  df = pandas.DataFrame(data=[['i loved the new movie and enjoyed the great acting']], columns=['reviewText'])
+
+  # Turn on data collection debug mode to view output in stdout
+  os.environ["AML_MODEL_DC_DEBUG"] = 'true'
+
+  # Test the output of the functions
+  init()
+  input1 = pandas.DataFrame(data=[['i loved the new movie and enjoyed the great acting']], columns=['reviewText'])
+
+  print("Result: " + run(input1))
+  
+  inputs = {"input_df": SampleDefinition(DataTypes.PANDAS, df)}
+  
+  #Genereate the schema
+  #generate_schema(run_func=run, inputs=inputs, filepath='./outputs/senti_schema2.json')
+  generate_schema(run_func=run, inputs=inputs, filepath='myschema2.json')
+  print("Schema generated")
 
 if __name__ == '__main__':
-    init()
-    input1 = pandas.DataFrame(data=[['i loved the new movie and enjoyed the great acting']], columns=['reviewText'])
-    res = run(input1)
-    print(res)
+    #init()
+    #input1 = pandas.DataFrame(data=[['i loved the new movie and enjoyed the great acting']], columns=['reviewText'])
+    #res = run(input1)
+    #print(res)
+    main()
