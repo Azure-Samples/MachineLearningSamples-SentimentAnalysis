@@ -132,7 +132,6 @@ def main():
   inputs = {"input_df": SampleDefinition(DataTypes.PANDAS, df)}
   
   #Genereate the schema
-  #generate_schema(run_func=run, inputs=inputs, filepath='./outputs/senti_schema2.json')
   generate_schema(run_func=run, inputs=inputs, filepath='myschema2.json')
   print("Schema generated")
 
