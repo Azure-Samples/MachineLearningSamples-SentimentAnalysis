@@ -72,10 +72,11 @@ To always set these variables when you log in, copy the export commands into you
 cat < ~/.amlenvrc >> ~/.bashrc
 ```
 
-Upload the below files to the vm (you could use scp to perform the upload):
+Upload the below files generated to the vm (you could use scp to perform the upload):
+
 conda_dependencies.yml
 sentModel.h5
-myschema.json
+myschema.json (this can be generated using senti_schema.py)
 senti_schema.py
 
 ## 3. Image Creation
