@@ -74,13 +74,13 @@ cat < ~/.amlenvrc >> ~/.bashrc
 
 Upload the below files generated to the vm (you could use scp to perform the upload):
 
-conda_dependencies.yml
+* conda_dependencies.yml
 
-sentModel.h5
+* sentModel.h5
 
-myschema.json (this can be generated using senti_schema.py)
+* myschema.json (this can be generated using senti_schema.py)
 
-senti_schema.py
+* senti_schema.py
 
 ## 3. Image Creation
 
