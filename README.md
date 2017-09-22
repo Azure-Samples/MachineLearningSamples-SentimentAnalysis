@@ -4,7 +4,7 @@ Sentiment analysis is a well-known task in the realm of natural language process
 
 ## Link to the Gallery GitHub repository
 
-The public GitHub repository for this Q & A matching example contains all the code samples:
+The public GitHub repository for this sentiment analysis example contains all the code samples:
 [https://github.com/Azure/MachineLearningSamples-SentimentAnalysis](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis)
 
 ## Overview
