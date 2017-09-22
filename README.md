@@ -1,6 +1,10 @@
 # Sentiment analysis using deep learning with Azure Machine Learning
 
-Sentiment analysis is a well-known task in the realm of natural language processing. Given a set of texts, the objective is to determine the polarity of that text. The objective of this lab is to use CNTK as the backend for Keras and implement sentiment analysis from movie reviews.
+## Link to the Microsoft DOCS site
+
+The detailed documentation for this sentiment analysis example includes the step-by-step walk-through:
+[https://docs.microsoft.com/azure/machine-learning/preview/scenario-sentiment-analysis-deep-learning](https://docs.microsoft.com/azure/machine-learning/preview/scenario-sentiment-analysis-deep-learning)
+
 
 ## Link to the Gallery GitHub repository
 
