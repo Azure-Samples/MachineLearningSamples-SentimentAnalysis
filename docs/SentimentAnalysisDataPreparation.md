@@ -41,9 +41,7 @@ Data Preparation is part of the Azure Machine Learning client experience. Data P
 
 ![PathColumn](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/PathColumn.png)
 
-3.7. Select Transform this data
-
-![Transform](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/Transform.png)
+3.7. Select Prepare and save the prep file as sampleReviews.dprep. You will see sampleReviews.dprep under Data Preparations. Select the prep file.
 
 3.8. Select Transforms -> Transform Dataflow (Script) to open the following Script window. The data imported is in the form of a dataframe df. Lower case the reviews using the expression:
 
