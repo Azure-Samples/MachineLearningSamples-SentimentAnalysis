@@ -172,7 +172,6 @@ def predict_review(model,review_text):
     return model.predict(x_predict)[0][0]
 
 # the dataset in the csv format
-dataset = 'sampleReviews.txt'
 review_text = 'i loved the movie'
 
 # now train the odel using the dataset
