@@ -43,7 +43,7 @@ def train_model(ratio=.5):
     epochs = 2
     seed = 113
     # get the reviews_list and labels_ist from the csv file
-    df = read_reviews_from_csv('sampleReviews.txt')
+    df = read_reviews_from_csv('data/sampleReviews.txt')
 
     rows, columns = df.shape
     reviews_list = []
