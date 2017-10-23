@@ -1,6 +1,6 @@
 # Sentiment Analysis using Deep Learning: Modeling  - Keras with CNTK Backend
 
-The script that executes the below steps is [SentimentExtraction.py](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Code/SentimentExtraction.py)
+The script that executes the below steps is [SentimentExtraction.py](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/SentimentExtraction.py)
 
 ## 1. Objectives
 
