@@ -2,7 +2,7 @@
   "ArgumentVector":[
     "$file"
   ],
-  "Framework":"PySpark",
+  "Framework":"Python",
   "CondaFile":null,
   "ManagedEnvironment":true,
   "TrackedRun":true,
