@@ -214,7 +214,7 @@ az ml experiment submit -c local SentimentExtraction.py
 
 ## 9. Without dprep
 
-The csv file can also be read using pandas into a dataframe df as shown below and not via dprep:
+The reviews csv file can also be read using pandas into a dataframe df as shown below and not via dprep:
 
 ```
 def read_reviews_from_csv(dataset):
@@ -235,6 +235,6 @@ This command pulls down a base docker image, layers a conda environment on the b
 
 ![BaseDockerImage](Images/BaseDockerImage.png)
 
-It then executes your script. You should see Docker image construction messages in the CLI window. In the end, on successful execution, you will the sentiment score.
+It then executes your script. You should see Docker image construction messages in the CLI window. In the end, on successful execution, you will see the sentiment score.
 
 ![DockerCLIWindow](Images/DockerCLIWindow.png)
