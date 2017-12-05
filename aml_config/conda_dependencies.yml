@@ -6,17 +6,16 @@
 
 # For Spark packages and configuration, see spark_dependencies.yml.
 
-name: project_environment
+name: sentiment_environment
 dependencies:
   - python=3.5.2
   # ipykernel is required to use the remote/docker kernels in Jupyter Notebook.
   - ipykernel=4.6.1
+  - scikit-learn=0.18.1
   - pip:
     # This is the operationalization API for Azure Machine Learning. Details:
     # https://github.com/Azure/Machine-Learning-Operationalization
     - azure-ml-api-sdk==0.1.0a11
-    - keras
-    - scikit-learn
-    - pandas
-    - tensorflow
-    - h5py
+    - keras==2.1.2
+    - h5py==2.7.1
+    - tensorflow==1.4.0
