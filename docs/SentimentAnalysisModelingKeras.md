@@ -1,4 +1,4 @@
-# Sentiment Analysis using Deep Learning: Modeling  - Keras with CNTK Backend
+# Sentiment Analysis using Deep Learning: Modeling using Keras
 
 The script that executes the below steps is [SentimentExtraction.py](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/SentimentExtraction.py)
 
@@ -6,7 +6,7 @@ The script that executes the below steps is [SentimentExtraction.py](https://git
 
 Keras does not handle low-level operations such as convolutions itself. Instead, it relies on a specialized, well-optimized library to do so, serving as the "backend engine" of Keras. Keras being modular, several different backend engines can be plugged seamlessly into Keras.
 
-The objective of this guide is to use CNTK as the backend for Keras and implement sentiment analysis from movie reviews using deep learning.
+The objective of this guide is to use Keras for sentiment analysis from movie reviews using deep learning.
 
 This guide shows:
 * How to import movie reviews and perform preprocessing
@@ -17,11 +17,12 @@ This guide shows:
 
 The IMDB movie dataset consists of moving reviews with positive and negative sentiment. In this problem, we will use a small dataset of movie reviews to perform modeling and determine whether a given movie review has a positive or negative sentiment.
 
-## 3. CNTK Backend
+## 3. Backend
 
-If you do not have Keras installed, you can install it using
+If you do not have Keras and h5py installed, you can install it using
 ```
 pip install keras
+pip install h5py
 ```
 If you have run this command at least once, you will find the Keras configuration file at:
 
@@ -40,7 +41,7 @@ If it isn't there, you can create it. The default configuration file looks like 
 }
 ```
 
-Change the field backend to "cntk", and Keras will use the new configuration next time you run any Keras code.
+Change the field backend to engine of your choice, and Keras will use the new configuration next time you run any Keras code.
 
 keras.json details:
 
@@ -48,7 +49,7 @@ keras.json details:
 * For 2D data (e.g. image), **"channels_last"** assumes **(rows, cols, channels)** while **"channels_first"** assumes **(channels, rows, cols)**. 
 * **epsilon**: float, a numeric fuzzing constant used to avoid dividing by zero in some operations.
 * **floatx**: string, **"float16"**, **"float32"**, or **"float64"**. Default float precision.
-* **backend**: string, **"tensorflow"**, **"theano"**, or **"cntk"**.
+* **backend**: string, **"tensorflow"** or **"theano"**.
 
 ## 4. Loading Movie Review Data
 
@@ -200,7 +201,7 @@ model = train_model(dataset)
 print("Review Sentiment:", predict_review(model, review_text.lower()))
 ```
 
-## 8. Execution
+## 8. Local Execution
 
 Select File->Open Command-Line Interface and run the following command to see results as illustrated below:
 
@@ -208,4 +209,32 @@ Select File->Open Command-Line Interface and run the following command to see re
 az ml experiment submit -c local SentimentExtraction.py
 ```
 
-![SentimentExtraction](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/docs/Images/SentimentExtraction.png)
+![SentimentExtraction](Images/SentimentExtraction.png)
+
+
+## 9. Without dprep
+
+The reviews csv file can also be read using pandas into a dataframe df as shown below and not via dprep:
+
+```
+def read_reviews_from_csv(dataset):
+    df = pd.read_csv(dataset, encoding='cp437', sep='|')
+    df = df.apply(lambda x: x.astype(str).str.lower())
+    return df
+```
+
+## 10. Execution – Local Docker Container
+
+If you have a Docker engine running locally, in the CLI window, run the below command. Note the change in run configuration from local to docker.
+
+```
+az ml experiment submit -c docker SentimentExtraction.py
+```
+
+This command pulls down a base docker image, layers a conda environment on the base image based on the conda_dependencies.yml file in your_aml_config_ directory, and then starts a Docker container. You will be able to see the dependencies as follows:
+
+![BaseDockerImage](Images/BaseDockerImage.png)
+
+It then executes your script. You should see Docker image construction messages in the CLI window. In the end, on successful execution, you will see the sentiment score.
+
+![DockerCLIWindow](Images/DockerCLIWindow.png)
