@@ -1,11 +1,9 @@
-{
-  "ArgumentVector":[
-    "$file"
-  ],
-  "Framework":"Python",
-  "CondaFile":null,
-  "ManagedEnvironment":true,
-  "TrackedRun":true,
-  "Target":"docker",
-  "PrepareEnvironment":true
-}
+---
+ArgumentVector:
+- "$file"
+Framework: Python
+CondaFile: 
+ManagedEnvironment: true
+TrackedRun: true
+Target: docker
+PrepareEnvironment: true
