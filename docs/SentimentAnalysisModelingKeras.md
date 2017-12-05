@@ -201,7 +201,7 @@ model = train_model(dataset)
 print("Review Sentiment:", predict_review(model, review_text.lower()))
 ```
 
-## 8. Execution
+## 8. Local Execution
 
 Select File->Open Command-Line Interface and run the following command to see results as illustrated below:
 
@@ -210,3 +210,31 @@ az ml experiment submit -c local SentimentExtraction.py
 ```
 
 ![SentimentExtraction](Images/SentimentExtraction.png)
+
+
+## 9. Without dprep
+
+The csv file can also be read using pandas into a dataframe df as shown below and not via dprep:
+
+```
+def read_reviews_from_csv(dataset):
+    df = pd.read_csv(dataset, encoding='cp437', sep='|')
+    df = df.apply(lambda x: x.astype(str).str.lower())
+    return df
+```
+
+## 10. Execution – Local Docker Container
+
+If you have a Docker engine running locally, in the CLI window, run the below command. Note the change in run configuration from local to docker.
+
+```
+az ml experiment submit -c docker SentimentExtraction.py
+```
+
+This command pulls down a base docker image, layers a conda environment on the base image based on the conda_dependencies.yml file in your_aml_config_ directory, and then starts a Docker container. You will be able to see the dependencies as follows:
+
+![BaseDockerImage](Images/BaseDockerImage.png)
+
+It then executes your script. You should see Docker image construction messages in the CLI window. In the end, on successful execution, you will the sentiment score.
+
+![DockerCLIWindow](Images/DockerCLIWindow.png)
