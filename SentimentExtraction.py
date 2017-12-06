@@ -8,11 +8,17 @@ from keras.preprocessing.text import text_to_word_sequence
 from keras.preprocessing import sequence
 from keras.datasets import imdb
 from azureml.dataprep.package import run
+from azureml.logging import get_azureml_logger
 import h5py
 import numpy as np
 import pandas as pd
 import csv
 import argparse
+
+# initialize the logger
+
+run_logger = get_azureml_logger()
+run_logger.log('amlrealworld.SentimentAnalysis.SentimentExtraction','true')
 
 def read_reviews_from_csv(dataset):
     '''

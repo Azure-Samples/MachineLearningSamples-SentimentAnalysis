@@ -21,6 +21,9 @@ Sentiment analysis is a well-known task in the realm of natural language process
 2. An installed copy of Azure Machine Learning Workbench with a workspace created.
 3. The deployment part of this example is run on a Linux DSVM.
 
+## Data / Telemetry
+Sentiment Analysis collects usage data and sends it to Microsoft to help improve our products and services. Read our [privacy statement](https://privacy.microsoft.com/en-us/privacystatement) to learn more.
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
