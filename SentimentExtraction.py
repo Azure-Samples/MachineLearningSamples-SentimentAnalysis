@@ -32,7 +32,7 @@ def read_reviews_from_csv(dataset):
     df = df.apply(lambda x: x.astype(str).str.lower())
     return df
 
-def train_model(ratio=.5):
+def train_model(dataset, ratio=.5):
     '''
     Main function to build the model. The funcion sets parameters for building the model.
     @returns:
@@ -49,7 +49,7 @@ def train_model(ratio=.5):
     epochs = 2
     seed = 113
     # get the reviews_list and labels_ist from the csv file
-    df = run('sampleReviews.dprep', dataflow_idx=0)
+    df = read_reviews_from_csv(dataset)
 
     rows, columns = df.shape
     reviews_list = []
@@ -182,6 +182,6 @@ dataset = 'sampleReviews.txt'
 review_text = 'i loved the movie'
 
 # now train the model using the dataset
-model = train_model()
+model = train_model(dataset)
 print("Review Sentiment:", predict_review(model, review_text.lower()))
 model.save('./outputs/sentModel.h5')
