@@ -23,6 +23,7 @@ If you do not have Keras and h5py installed, you can install it using
 ```
 pip install keras
 pip install h5py
+pip install tensorflow
 ```
 If you have run this command at least once, you will find the Keras configuration file at:
 
@@ -53,20 +54,15 @@ keras.json details:
 
 ## 4. Loading Movie Review Data
 
-The train_model() function loads the [review dataset](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Data/sampleReviews.txt) and builds a deep learning model. Utilize the dprep file created after transformations to load in train_model:
+The train_model() function loads the [review dataset](https://github.com/Azure/MachineLearningSamples-SentimentAnalysis/blob/master/Data/sampleReviews.txt) and builds a deep learning model. 
+
+The reviews csv file can be read in multiple ways. You can also use dprep to read the data (from the previous lab) as shown in sampleReviews.py or you could use pandas into a dataframe df as shown below:
 
 ```
-df = run('sampleReviews.dprep', dataflow_idx=0)
-    rows, columns = df.shape
-    reviews_list = []
-    labels_list = []
-    
-    for i in range(0, rows):
-        try:
-            labels_list.append(int(float(df.iloc[i,1])))
-            reviews_list.append(df.iloc[i,0])
-        except UnicodeEncodeError:
-            pass
+def read_reviews_from_csv(dataset):
+    df = pd.read_csv(dataset, encoding='cp437', sep='|')
+    df = df.apply(lambda x: x.astype(str).str.lower())
+    return df
 ```
 
 ## 5. Parameters
@@ -211,19 +207,7 @@ az ml experiment submit -c local SentimentExtraction.py
 
 ![SentimentExtraction](Images/SentimentExtraction.png)
 
-
-## 9. Without dprep
-
-The reviews csv file can also be read using pandas into a dataframe df as shown below and not via dprep:
-
-```
-def read_reviews_from_csv(dataset):
-    df = pd.read_csv(dataset, encoding='cp437', sep='|')
-    df = df.apply(lambda x: x.astype(str).str.lower())
-    return df
-```
-
-## 10. Execution – Local Docker Container
+## 9. Execution – Local Docker Container
 
 If you have a Docker engine running locally, in the CLI window, run the below command. Note the change in run configuration from local to docker.
 
