@@ -13,7 +13,7 @@ The public GitHub repository for this sentiment analysis example contains all th
 
 ## Overview
 
-Sentiment analysis is a well-known task in the realm of natural language processing. Given a set of texts, the objective is to determine the sentiment of that text. This example demonstrates the use CNTK as the backend for Keras to perform sentiment analysis from movie reviews.
+Sentiment analysis is a well-known task in the realm of natural language processing. Given a set of texts, the objective is to determine the sentiment of that text. This example demonstrates the use TensorFlow as the backend for Keras to perform sentiment analysis from movie reviews.
 
 ## Key components needed to run this example
 
